@@ -34,7 +34,9 @@ loader = WebBaseLoader(url, requests_kwargs={"headers": headers})
 
 docs = loader.load()
 
-print(docs[0].page_content)
+#page content - the content of the webpage
+print(docs[0])
+print("\n\n", docs[0].page_content)
 
 chain = prompt | model | parser
 
